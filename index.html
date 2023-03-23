@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts Cairo -->
+    <!-- Font Awesome & Bootstap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Font Awesome & Bootstap Icons -->
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="style/main.css" />
+    <!-- Main CSS file -->
+    <!-- Bar Icon -->
+    <link
+      rel="icon"
+      href="imgs/icons8-shopping-cart-64.png"
+      type="image/icon type"
+    />
+    <!-- Bar Icon -->
+    <title>Beddi</title>
+  </head>
+  <body>
+    <!-- Start Cart Icon -->
+    <div class="cart">
+      <div class="cart-handler"></div>
+      <div class="cart-body"></div>
+      <div class="cart-wheels">
+        <div class="cart-wheel-left"></div>
+        <div class="cart-wheel-right"></div>
+      </div>
+      <div class="cart-line-one"></div>
+      <div class="cart-line-two"></div>
+      <div class="cart-line-three"></div>
+    </div>
+    <!-- End Cart Icon -->
+    <!-- Start Commponents -->
+    <button class="scroll-to-top" id="scroll-to-top" title="Scroll to top">
+      <i class="fa fa-2x fa-arrow-circle-up"></i>
+    </button>
+    <!-- End Commponents -->
+    <!-- Start Header -->
+    <header class="main-navbar" id="main-navbar">
+      <div class="brand-title">
+        <img src="imgs/icons8-shopping-cart-64.png" alt="" />
+        <h3>Beddi</h3>
+      </div>
+      <ul id="links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#trending">Trendings</a>
+        </li>
+        <li>
+          <a href="#dotd">Deal of the Day</a>
+        </li>
+        <li>
+          <a href="#products">Specials</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+      </ul>
+      <form>
+        <input type="search" name="search" id="srch" placeholder="." />
+        <label for="search">Search</label>
+      </form>
+      <div class="sunshine" id="light-dark-switch">
+        <div class="sun-line-one"></div>
+        <div class="sun-line-two"></div>
+      </div>
+      <div id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main>
+      <!-- Start Landing -->
+      <div class="landing" id="landing">
+        <div class="layout-layer"></div>
+        <div class="text-sec">
+          <h1 class="heading">Beddi Shop</h1>
+          <p>You can always tell us what you want</p>
+        </div>
+      </div>
+      <!-- End Landing -->
+      <!-- Start Categories -->
+      <div class="categories" id="categories">
+        <div class="container">
+          <div class="cat-holder">
+            <!-- Start Cat-01 -->
+            <div class="cat cat-01">
+              <div class="img">
+                <img src="../imgs/cat-01.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="cat-name">
+                  <h3>Men's</h3>
+                  <span class="count">(32)</span>
+                </div>
+                <button class="show-all">Show All</button>
+              </div>
+            </div>
+            <!-- End Cat-01 -->
+            <!-- Start Cat-02 -->
+            <div class="cat cat-02">
+              <div class="img">
+                <img src="../imgs/cat-02.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="cat-name">
+                  <h3>Women's</h3>
+                  <span class="count">(50)</span>
+                </div>
+                <button class="show-all">Show All</button>
+              </div>
+            </div>
+            <!-- End Cat-02 -->
+            <!-- Start Cat-03 -->
+            <div class="cat cat-03">
+              <div class="img">
+                <img src="../imgs/cat-03.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="cat-name">
+                  <h3>Glasses & Lens</h3>
+                  <span class="count">(17)</span>
+                </div>
+                <button class="show-all">Show All</button>
+              </div>
+            </div>
+            <!-- End Cat-03 -->
+            <!-- Start Cat-04 -->
+            <div class="cat cat-04">
+              <div class="img">
+                <img src="../imgs/cat-04.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="cat-name">
+                  <h3>Jeans</h3>
+                  <span class="count">(41)</span>
+                </div>
+                <button class="show-all">Show All</button>
+              </div>
+            </div>
+            <!-- End Cat-04 -->
+            <!-- Start Cat-05 -->
+            <div class="cat cat-05">
+              <div class="img">
+                <img src="../imgs/cat-05.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="cat-name">
+                  <h3>T-Shirts</h3>
+                  <span class="count">(44)</span>
+                </div>
+                <button class="show-all">Show All</button>
+              </div>
+            </div>
+            <!-- End Cat-05 -->
+            <!-- Start Cat-06 -->
+            <div class="cat cat-06">
+              <div class="img">
+                <img src="../imgs/cat-06.png" alt="" />
+              </div>
+              <div class="text">
+                <div class="cat-name">
+                  <h3>Gadgets</h3>
+                  <span class="count">(17)</span>
+                </div>
+                <button class="show-all">Show All</button>
+              </div>
+            </div>
+            <!-- End Cat-06 -->
+          </div>
+        </div>
+      </div>
+      <!-- End Categories -->
+      <!-- Start Trending -->
+      <div class="trending" id="trending">
+        <div class="speacial-heading">
+          <h1>Trending</h1>
+          <p>We Wish to be around your taste</p>
+        </div>
+        <div class="container">
+          <div class="trending-container">
+            <!-- Start Cell-01 -->
+            <div class="cell cell-01">
+              <img src="./imgs/trending-01.jpg" alt="" />
+              <div class="text">
+                <h3>Tommy's Hand Bag</h3>
+                <p>Wallets</p>
+                <div class="pricing">
+                  <span class="price">30,000</span>
+                  <span class="old-price">37,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-01 -->
+            <!-- Start Cell-02 -->
+            <div class="cell cell-02">
+              <img src="./imgs/trending-02.jpg" alt="" />
+              <div class="text">
+                <h3>Apple AirPods</h3>
+                <p>Gadgets</p>
+                <div class="pricing">
+                  <span class="price">200,000</span>
+                  <span class="old-price">225,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-02 -->
+            <!-- Start Cell-03 -->
+            <div class="cell cell-03">
+              <img src="./imgs/trending-03.jpg" alt="" />
+              <div class="text">
+                <h3>Zip Lighter</h3>
+                <p>Men's</p>
+                <div class="pricing">
+                  <span class="price">30,000</span>
+                  <span class="old-price">37,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-03 -->
+            <!-- Start Cell-04 -->
+            <div class="cell cell-04">
+              <img src="./imgs/trending-04.jpg" alt="" />
+              <div class="text">
+                <h3>Kemei Trimmer</h3>
+                <p>Men's</p>
+                <div class="pricing">
+                  <span class="price">150,000</span>
+                  <span class="old-price">162,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-04 -->
+            <!-- Start Cell-05 -->
+            <div class="cell cell-05">
+              <img src="./imgs/trending-05.jpg" alt="" />
+              <div class="text">
+                <h3>Protien Shaker</h3>
+                <p>Gadgets</p>
+                <div class="pricing">
+                  <span class="price">30,000</span>
+                  <span class="old-price">37,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-05 -->
+            <!-- Start Cell-06 -->
+            <div class="cell cell-06">
+              <img src="./imgs/trending-06.jpg" alt="" />
+              <div class="text">
+                <h3>Front-pocket Wallet</h3>
+                <p>Wallets</p>
+                <div class="pricing">
+                  <span class="price">30,000</span>
+                  <span class="old-price">37,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-06 -->
+            <!-- Start Cell-07 -->
+            <div class="cell cell-07">
+              <img src="./imgs/trending-07.jpg" alt="" />
+              <div class="text">
+                <h3>Louis Vuitton wallet</h3>
+                <p>Wallets</p>
+                <div class="pricing">
+                  <span class="price">50,000</span>
+                  <span class="old-price">60,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-07 -->
+            <!-- Start Cell-08 -->
+            <div class="cell cell-08">
+              <img src="./imgs/trending-08.jpg" alt="" />
+              <div class="text">
+                <h3>Mont Blank Hand Bag</h3>
+                <p>Wallets</p>
+                <div class="pricing">
+                  <span class="price">40,000</span>
+                  <span class="old-price">45,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-08 -->
+            <!-- Start Cell-09 -->
+            <div class="cell cell-09">
+              <img src="./imgs/trending-09.jpg" alt="" />
+              <div class="text">
+                <h3>AKG Headphones</h3>
+                <p>Gadgets</p>
+                <div class="pricing">
+                  <span class="price">30,000</span>
+                  <span class="old-price">37,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-09 -->
+            <!-- Start Cell-10 -->
+            <div class="cell cell-10">
+              <img src="./imgs/trending-10.jpg" alt="" />
+              <div class="text">
+                <h3>Guess Watch</h3>
+                <p>Watches</p>
+                <div class="pricing">
+                  <span class="price">100,000</span>
+                  <span class="old-price">125,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-10 -->
+            <!-- Start Cell-11 -->
+            <div class="cell cell-11">
+              <img src="./imgs/trending-11.jpg" alt="" />
+              <div class="text">
+                <h3>Kemei Clipper</h3>
+                <p>Men's</p>
+                <div class="pricing">
+                  <span class="price">200,000</span>
+                  <span class="old-price">225,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-11 -->
+            <!-- Start Cell-12 -->
+            <div class="cell cell-12">
+              <img src="./imgs/trending-12.jpg" alt="" />
+              <div class="text">
+                <h3>Ray-Ban Glasses</h3>
+                <p>Glasses</p>
+                <div class="pricing">
+                  <span class="price">50,000</span>
+                  <span class="old-price">57,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-12 -->
+            <!-- Start Cell-13 -->
+            <div class="cell cell-13">
+              <img src="./imgs/trending-13.jpg" alt="" />
+              <div class="text">
+                <h3>Mont Blank Hand Bag</h3>
+                <p>Wallets</p>
+                <div class="pricing">
+                  <span class="price">50,000</span>
+                  <span class="old-price">57,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-13 -->
+            <!-- Start Cell-14 -->
+            <div class="cell cell-14">
+              <img src="./imgs/trending-14.jpg" alt="" />
+              <div class="text">
+                <h3>Ray-Ban Glasses</h3>
+                <p>Glasses</p>
+                <div class="pricing">
+                  <span class="price">90,000</span>
+                  <span class="old-price">100,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-14 -->
+            <!-- Start Cell-15 -->
+            <div class="cell cell-15">
+              <img src="./imgs/trending-15.jpg" alt="" />
+              <div class="text">
+                <h3>Ray-Ban Glasses</h3>
+                <p>Glasses</p>
+                <div class="pricing">
+                  <span class="price">90,000</span>
+                  <span class="old-price">100,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-15 -->
+            <!-- Start Cell-16 -->
+            <div class="cell cell-16">
+              <img src="./imgs/trending-16.jpg" alt="" />
+              <div class="text">
+                <h3>Front-pocket Wallet</h3>
+                <p>Wallets</p>
+                <div class="pricing">
+                  <span class="price">30,000</span>
+                  <span class="old-price">37,000</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Cell-16 -->
+          </div>
+        </div>
+      </div>
+      <!-- End Trending -->
+      <!-- Start Deal of the Day -->
+      <div class="dotd" id="dotd">
+        <div class="speacial-heading">
+          <h1>Deal of The Day</h1>
+          <p>Let us shake hands</p>
+        </div>
+        <div class="container">
+          <div class="dotd-container">
+            <img src="./imgs/dotd.jpg" alt="" />
+            <div class="deal-description">
+              <div class="stars">
+                <span class="star-filled"></span>
+                <span class="star-filled"></span>
+                <span class="star-filled"></span>
+                <span class="star-empty"></span>
+                <span class="star-empty"></span>
+              </div>
+              <h3>Ramadan's Collection</h3>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, eligendi.
+              </p>
+              <div class="pricing">
+                <span class="price">150,000</span>
+                <span class="old-price">162,000</span>
+              </div>
+              <button class="add-to-cart" id="add-to-cart-02">
+                Add to Cart
+              </button>
+              <div class="quanity">
+                <span>Already Sold: <span>20</span></span>
+                <span>Available: <span>40</span></span>
+              </div>
+              <div class="line"></div>
+              <p class="hurry">Hurry Up! Offer ends in:</p>
+              <div class="counter-container">
+                <span class="counter">360<span>Days</span></span>
+                <span class="counter">24<span>Hours</span></span>
+                <span class="counter">59<span>Min</span></span>
+                <span class="counter">00<span>Sec</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Deal of the Day -->
+      <!-- Start Products -->
+      <div class="products" id="products">
+        <div class="speacial-heading">
+          <h1>Specials</h1>
+          <p>Because You're Special to us</p>
+        </div>
+        <div class="container">
+          <div class="cards-holder">
+            <!-- Start Card-1 -->
+            <div class="card" id="product-01">
+              <img src="imgs/product-01-01.jpg" alt="" />
+              <div class="text">
+                <div class="product">
+                  <h3 class="brand-title">Card Lighter</h3>
+                  <div class="stars">
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-empty"></div>
+                    <div class="star-empty"></div>
+                  </div>
+                  <p class="brand-describtion">
+                    for <span class="price-01">30,000 s.p.</span>
+                  </p>
+                </div>
+                <div class="btns">
+                  <a href="#" class="details" id="details">See Details</a>
+                  <button class="add-to-cart" id="add-to-cart-01">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- End Card-1 -->
+            <!-- Start Card-2 -->
+            <div class="card" id="product-02">
+              <img src="imgs/product-02-01.jpg" alt="" />
+              <div class="text">
+                <div class="product">
+                  <h3 class="brand-title">Hand Wallet</h3>
+                  <div class="stars">
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-empty"></div>
+                    <div class="star-empty"></div>
+                  </div>
+                  <p class="brand-describtion">
+                    for <span class="price-02">50,000 s.p.</span>
+                  </p>
+                </div>
+                <div class="btns">
+                  <a href="#" class="details">See Details</a>
+                  <button class="add-to-cart" id="add-to-cart-02">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- End Card-2 -->
+            <!-- Start Card-3 -->
+            <div class="card" id="product-03">
+              <img src="imgs/product-03-01.jpg" alt="" />
+              <div class="text">
+                <div class="product">
+                  <h3 class="brand-title">Bag</h3>
+                  <div class="stars">
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-empty"></div>
+                  </div>
+                  <p class="brand-describtion">
+                    for <span class="price-03">90,000 s.p.</span>
+                  </p>
+                </div>
+                <div class="btns">
+                  <a href="#" class="details">See Details</a>
+                  <button class="add-to-cart" id="add-to-cart-03">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- End Card-3 -->
+            <!-- Start Card-4 -->
+            <div class="card" id="product-04">
+              <img src="imgs/product-04-01.jpg" alt="" />
+              <div class="text">
+                <div class="product">
+                  <h3 class="brand-title">G-Rex Watch</h3>
+                  <div class="stars">
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-empty"></div>
+                  </div>
+                  <p class="brand-describtion">
+                    for
+                    <span class="price-04" id="add-to-cart-04"
+                      >50,000 s.p.</span
+                    >
+                  </p>
+                </div>
+                <div class="btns">
+                  <a href="#" class="details">See Details</a>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <!-- End Card-4 -->
+            <!-- Start Card-5 -->
+            <div class="card" id="product-05">
+              <img src="imgs/product-05-01.jpg" alt="" />
+              <div class="text">
+                <div class="product">
+                  <h3 class="brand-title">Scarf</h3>
+                  <div class="stars">
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-empty"></div>
+                    <div class="star-empty"></div>
+                  </div>
+                  <p class="brand-describtion">
+                    for
+                    <span class="price-05" id="add-to-cart-05"
+                      >25,000 s.p.</span
+                    >
+                  </p>
+                </div>
+                <div class="btns">
+                  <a href="#" class="details">See Details</a>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <!-- End Card-5 -->
+            <!-- Start Card-6 -->
+            <div class="card" id="product-06">
+              <img src="imgs/product-06-01.jpg" alt="" />
+              <div class="text">
+                <div class="product">
+                  <h3 class="brand-title">Classic Watch</h3>
+                  <div class="stars">
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                    <div class="star-filled"></div>
+                  </div>
+                  <p class="brand-describtion">
+                    for <span class="price-06">50,000 s.p.</span>
+                  </p>
+                </div>
+                <div class="btns">
+                  <a href="#" class="details">See Details</a>
+                  <button class="add-to-cart" id="add-to-cart-06">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- End Card-6 -->
+          </div>
+        </div>
+        <button class="see-full" id="see-full">See Our Collection</button>
+      </div>
+      <!-- End Products -->
+      <!-- Start Services -->
+      <div class="services" id="services">
+        <div class="speacial-heading">
+          <h1>Services</h1>
+          <p>You're so Welcome</p>
+        </div>
+        <div class="container">
+          <div class="services-container">
+            <!-- Start Card-01 -->
+            <div class="service-card">
+              <i class="fa fa-2x fa-earth"></i>
+              <div class="text">
+                <h3>Worldwide Delivery</h3>
+                <p>For order over 700,000</p>
+              </div>
+            </div>
+            <!-- End Card-01 -->
+            <!-- Start Card-02 -->
+            <div class="service-card">
+              <i class="fa fa-2x fa-rocket"></i>
+              <div class="text">
+                <h3>Next Day Delivery</h3>
+                <p>Syria Orders only</p>
+              </div>
+            </div>
+            <!-- End Card-02 -->
+            <!-- Start Card-03 -->
+            <div class="service-card">
+              <i class="fa fa-2x fa-phone"></i>
+              <div class="text">
+                <h3>Best Online Support</h3>
+                <p>Hours: 08 A:M - 12 P:M</p>
+              </div>
+            </div>
+            <!-- End Card-03 -->
+            <!-- Start Card-04 -->
+            <div class="service-card">
+              <i class="fa fa-2x fa-tent-arrow-turn-left"></i>
+              <div class="text">
+                <h3>Return Policy</h3>
+                <p>Easy & Free Return</p>
+              </div>
+            </div>
+            <!-- End Card-04 -->
+            <!-- Start Card-05 -->
+            <div class="service-card">
+              <i class="fa fa-2x fa-funnel-dollar"></i>
+              <div class="text">
+                <h3>30% Money Back</h3>
+                <p>For order over 700,000</p>
+              </div>
+            </div>
+            <!-- End Card-05 -->
+          </div>
+        </div>
+      </div>
+      <!-- End Services -->
+    </main>
+    <!-- End Main -->
+    <!-- Start Footer -->
+    <footer class="main-footer" id="main-footer">
+      <div class="container">
+        <div class="footer-category">
+          <h2 class="footer-category-title">Brand directory</h2>
+          <div class="footer-category-box">
+            <h3>Fashion :</h3>
+            <div class="footer-category-box-links">
+              <a href="#" class="footer-category-link">T-shirt</a>
+              <a href="#" class="footer-category-link">Shirts</a>
+              <a href="#" class="footer-category-link">shorts & jeans</a>
+              <a href="#" class="footer-category-link">jacket</a>
+              <a href="#" class="footer-category-link">dress & frock</a>
+              <a href="#" class="footer-category-link">innerwear</a>
+              <a href="#" class="footer-category-link">hosiery</a>
+            </div>
+          </div>
+          <div class="footer-category-box">
+            <h3>footwear :</h3>
+            <div class="footer-category-box-links">
+              <a href="#" class="footer-category-link">sport</a>
+              <a href="#" class="footer-category-link">formal</a>
+              <a href="#" class="footer-category-link">Boots</a>
+              <a href="#" class="footer-category-link">casual</a>
+              <a href="#" class="footer-category-link">cowboy shoes</a>
+              <a href="#" class="footer-category-link">safety shoes</a>
+              <a href="#" class="footer-category-link">Party wear shoes</a>
+              <a href="#" class="footer-category-link">Branded</a>
+              <a href="#" class="footer-category-link">Firstcopy</a>
+              <a href="#" class="footer-category-link">Long shoes</a>
+            </div>
+          </div>
+          <div class="footer-category-box">
+            <h3>jewellery :</h3>
+            <div class="footer-category-box-links">
+              <a href="#" class="footer-category-link">Necklace</a>
+              <a href="#" class="footer-category-link">Earrings</a>
+              <a href="#" class="footer-category-link">Couple rings</a>
+              <a href="#" class="footer-category-link">Pendants</a>
+              <a href="#" class="footer-category-link">Crystal</a>
+              <a href="#" class="footer-category-link">Bangles</a>
+              <a href="#" class="footer-category-link">bracelets</a>
+              <a href="#" class="footer-category-link">nosepin</a>
+              <a href="#" class="footer-category-link">chain</a>
+              <a href="#" class="footer-category-link">Earrings</a>
+              <a href="#" class="footer-category-link">Couple rings</a>
+            </div>
+          </div>
+          <div class="footer-category-box">
+            <h3>cosmetics :</h3>
+            <div class="footer-category-box-links">
+              <a href="#" class="footer-category-link">Shampoo</a>
+              <a href="#" class="footer-category-link">Bodywash</a>
+              <a href="#" class="footer-category-link">Facewash</a>
+              <a href="#" class="footer-category-link">makeup kit</a>
+              <a href="#" class="footer-category-link">liner</a>
+              <a href="#" class="footer-category-link">lipstick</a>
+              <a href="#" class="footer-category-link">prefume</a>
+              <a href="#" class="footer-category-link">Body soap</a>
+              <a href="#" class="footer-category-link">scrub</a>
+              <a href="#" class="footer-category-link">hair gel</a>
+              <a href="#" class="footer-category-link">hair colors</a>
+              <a href="#" class="footer-category-link">hair dye</a>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="footer-contact">
+          <h2>Contact</h2>
+          <div class="links">
+            <a href="tel:+963994241866"
+              ><i class="fa fa-phone"></i> +963 (994) 241866</a
+            >
+            <a href="mailto:beddigroup@gmail.com"
+              ><i class="fa fa-mail-bulk"></i>beddigroup@gmail.com</a
+            >
+            <a href="#"><i class="fa fa-location-arrow"></i>Syria, Homs</a>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="footer-social">
+          <h2>Social</h2>
+          <div class="links">
+            <a href="https://www.facebook.com/BeddiShop" target="_blank"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/beddishop/" target="_blank"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="line"></div>
+        <img src="./imgs/payment.png" alt="" />
+        <p class="copy">Copyrights &copy; Beddi All Rights Reserved.</p>
+        <div class="made-with">
+          Made by <span>Abdullah Altatan</span>
+          <a href="https://facebook.com/abdtt" target="_blank">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://instagram.com/abdullahalttan" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/aaltatan" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://codepen.io/aaltatan/pens/public" target="_blank">
+            <i class="bi bi-code"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Script File -->
+    <script src="js/main.js"></script>
+    <!-- Script File -->
+  </body>
+</html>

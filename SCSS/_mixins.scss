@@ -1,0 +1,35 @@
+@mixin flex($dir, $gap) {
+  display: flex;
+  align-items: center;
+  @if ($dir == "c") {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+  gap: $gap;
+}
+// ----------------------------------
+@mixin centering-middle() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+// ----------------------------------
+@mixin centering-h-middle() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+// ----------------------------------
+@mixin centering-v-middle() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// ----------------------------------
+@mixin grid($width, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, $width), 1fr));
+  gap: $gap;
+}

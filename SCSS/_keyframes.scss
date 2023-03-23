@@ -1,0 +1,66 @@
+@keyframes wheel-rotate {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  20% {
+    transform: rotate(72deg) translateX(10%);
+  }
+  40% {
+    transform: rotate(144deg) translateX(-10%);
+  }
+  60% {
+    transform: rotate(216deg) translateX(10%);
+  }
+  80% {
+    transform: rotate(288deg) translateX(-10%);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// ----------------------------------
+@keyframes cart-shake {
+  0% {
+    transform: translate(5%, -70%);
+  }
+  20% {
+    transform: translate(5%, -30%);
+  }
+  40% {
+    transform: translate(5%, -70%);
+  }
+  60% {
+    transform: translate(5%, -30%);
+  }
+  80% {
+    transform: translate(5%, -70%);
+  }
+  100% {
+    transform: translate(5%, -30%);
+  }
+}
+// ----------------------------------
+@keyframes cart-lines {
+  0% {
+    min-width: 0;
+  }
+  50% {
+    min-width: 100%;
+  }
+  100% {
+    min-width: 0;
+    left: 100%;
+  }
+}
+// ----------------------------------
+@keyframes glow-text {
+  0% {
+    background-size: 100vw 100vw;
+  }
+  50% {
+    background-size: 300vw 300vw;
+  }
+  100% {
+    background-size: 100vw 100vw;
+  }
+}
