@@ -36,27 +36,41 @@
   </head>
   <body>
     <!-- Start Cart Icon -->
-    <div class="cart">
-      <div class="cart-handler"></div>
-      <div class="cart-body"></div>
+    <div class="cart" id="cart-btn" data-value="0">
+      <div class="cart-handler" id="cart-handler"></div>
+      <div class="cart-body" id="cart-body"></div>
       <div class="cart-wheels">
-        <div class="cart-wheel-left"></div>
-        <div class="cart-wheel-right"></div>
+        <div class="cart-wheel-left" id="cart-wheel-left"></div>
+        <div class="cart-wheel-right" id="cart-wheel-right"></div>
       </div>
-      <div class="cart-line-one"></div>
-      <div class="cart-line-two"></div>
-      <div class="cart-line-three"></div>
+      <div class="cart-line-one" id="cart-line-one"></div>
+      <div class="cart-line-two" id="cart-line-two"></div>
+      <div class="cart-line-three" id="cart-line-three"></div>
     </div>
     <!-- End Cart Icon -->
     <!-- Start Commponents -->
     <button class="scroll-to-top" id="scroll-to-top" title="Scroll to top">
       <i class="fa fa-2x fa-arrow-circle-up"></i>
     </button>
+    <!-- ----------------- -->
+    <div class="curtain-cart-menu" id="curtain-cart-menu">
+      <a
+        href="javascript:void(0)"
+        class="menu-close-button"
+        id="menu-close-button"
+        >&times;</a
+      >
+      <!-- Start Container -->
+      <div class="cart-menu-container" id="cart-menu-container">
+        <h3 id="heading-total" data-value="0">Shoping Cart</h3>
+      </div>
+      <!-- End Container -->
+    </div>
     <!-- End Commponents -->
     <!-- Start Header -->
     <header class="main-navbar" id="main-navbar">
       <div class="brand-title">
-        <img src="imgs/icons8-shopping-cart-64.png" alt="" />
+        <img src="imgs/icons8-shopping-cart-64.png" alt="website Logo" />
         <h3>Beddi</h3>
       </div>
       <ul id="links">
@@ -109,7 +123,7 @@
             <!-- Start Cat-01 -->
             <div class="cat cat-01">
               <div class="img">
-                <img src="./imgs/cat-01.png" alt="" />
+                <img src="./imgs/cat-01.png" alt="Category Icon" />
               </div>
               <div class="text">
                 <div class="cat-name">
@@ -123,7 +137,7 @@
             <!-- Start Cat-02 -->
             <div class="cat cat-02">
               <div class="img">
-                <img src="./imgs/cat-02.png" alt="" />
+                <img src="./imgs/cat-02.png" alt="Category Icon" />
               </div>
               <div class="text">
                 <div class="cat-name">
@@ -137,7 +151,7 @@
             <!-- Start Cat-03 -->
             <div class="cat cat-03">
               <div class="img">
-                <img src="./imgs/cat-03.png" alt="" />
+                <img src="./imgs/cat-03.png" alt="Category Icon" />
               </div>
               <div class="text">
                 <div class="cat-name">
@@ -151,7 +165,7 @@
             <!-- Start Cat-04 -->
             <div class="cat cat-04">
               <div class="img">
-                <img src="./imgs/cat-04.png" alt="" />
+                <img src="./imgs/cat-04.png" alt="Category Icon" />
               </div>
               <div class="text">
                 <div class="cat-name">
@@ -165,7 +179,7 @@
             <!-- Start Cat-05 -->
             <div class="cat cat-05">
               <div class="img">
-                <img src="./imgs/cat-05.png" alt="" />
+                <img src="./imgs/cat-05.png" alt="Category Icon" />
               </div>
               <div class="text">
                 <div class="cat-name">
@@ -179,7 +193,7 @@
             <!-- Start Cat-06 -->
             <div class="cat cat-06">
               <div class="img">
-                <img src="./imgs/cat-06.png" alt="" />
+                <img src="./imgs/cat-06.png" alt="Category Icon" />
               </div>
               <div class="text">
                 <div class="cat-name">
@@ -204,7 +218,7 @@
           <div class="trending-container">
             <!-- Start Cell-01 -->
             <div class="cell cell-01">
-              <img src="./imgs/trending-01.jpg" alt="" />
+              <img src="./imgs/trending-01.jpg" alt="Tommy's Hand Bag Image" />
               <div class="text">
                 <h3>Tommy's Hand Bag</h3>
                 <p>Wallets</p>
@@ -217,7 +231,7 @@
             <!-- End Cell-01 -->
             <!-- Start Cell-02 -->
             <div class="cell cell-02">
-              <img src="./imgs/trending-02.jpg" alt="" />
+              <img src="./imgs/trending-02.jpg" alt="Apple AirPods Image" />
               <div class="text">
                 <h3>Apple AirPods</h3>
                 <p>Gadgets</p>
@@ -230,7 +244,7 @@
             <!-- End Cell-02 -->
             <!-- Start Cell-03 -->
             <div class="cell cell-03">
-              <img src="./imgs/trending-03.jpg" alt="" />
+              <img src="./imgs/trending-03.jpg" alt="Zip Lighter Image" />
               <div class="text">
                 <h3>Zip Lighter</h3>
                 <p>Men's</p>
@@ -243,7 +257,7 @@
             <!-- End Cell-03 -->
             <!-- Start Cell-04 -->
             <div class="cell cell-04">
-              <img src="./imgs/trending-04.jpg" alt="" />
+              <img src="./imgs/trending-04.jpg" alt="Kemei Trimmer Image" />
               <div class="text">
                 <h3>Kemei Trimmer</h3>
                 <p>Men's</p>
@@ -256,7 +270,7 @@
             <!-- End Cell-04 -->
             <!-- Start Cell-05 -->
             <div class="cell cell-05">
-              <img src="./imgs/trending-05.jpg" alt="" />
+              <img src="./imgs/trending-05.jpg" alt="Protien Shaker Image" />
               <div class="text">
                 <h3>Protien Shaker</h3>
                 <p>Gadgets</p>
@@ -269,7 +283,10 @@
             <!-- End Cell-05 -->
             <!-- Start Cell-06 -->
             <div class="cell cell-06">
-              <img src="./imgs/trending-06.jpg" alt="" />
+              <img
+                src="./imgs/trending-06.jpg"
+                alt="Front-pocket Wallet Image"
+              />
               <div class="text">
                 <h3>Front-pocket Wallet</h3>
                 <p>Wallets</p>
@@ -282,7 +299,10 @@
             <!-- End Cell-06 -->
             <!-- Start Cell-07 -->
             <div class="cell cell-07">
-              <img src="./imgs/trending-07.jpg" alt="" />
+              <img
+                src="./imgs/trending-07.jpg"
+                alt="Louis Vuitton wallet Image"
+              />
               <div class="text">
                 <h3>Louis Vuitton wallet</h3>
                 <p>Wallets</p>
@@ -295,7 +315,10 @@
             <!-- End Cell-07 -->
             <!-- Start Cell-08 -->
             <div class="cell cell-08">
-              <img src="./imgs/trending-08.jpg" alt="" />
+              <img
+                src="./imgs/trending-08.jpg"
+                alt="Mont Blank Hand Bag Image"
+              />
               <div class="text">
                 <h3>Mont Blank Hand Bag</h3>
                 <p>Wallets</p>
@@ -308,7 +331,7 @@
             <!-- End Cell-08 -->
             <!-- Start Cell-09 -->
             <div class="cell cell-09">
-              <img src="./imgs/trending-09.jpg" alt="" />
+              <img src="./imgs/trending-09.jpg" alt="AKG Headphones Image" />
               <div class="text">
                 <h3>AKG Headphones</h3>
                 <p>Gadgets</p>
@@ -321,7 +344,7 @@
             <!-- End Cell-09 -->
             <!-- Start Cell-10 -->
             <div class="cell cell-10">
-              <img src="./imgs/trending-10.jpg" alt="" />
+              <img src="./imgs/trending-10.jpg" alt="Guess Watch Image" />
               <div class="text">
                 <h3>Guess Watch</h3>
                 <p>Watches</p>
@@ -334,7 +357,7 @@
             <!-- End Cell-10 -->
             <!-- Start Cell-11 -->
             <div class="cell cell-11">
-              <img src="./imgs/trending-11.jpg" alt="" />
+              <img src="./imgs/trending-11.jpg" alt="Kemei Clipper Image" />
               <div class="text">
                 <h3>Kemei Clipper</h3>
                 <p>Men's</p>
@@ -347,7 +370,7 @@
             <!-- End Cell-11 -->
             <!-- Start Cell-12 -->
             <div class="cell cell-12">
-              <img src="./imgs/trending-12.jpg" alt="" />
+              <img src="./imgs/trending-12.jpg" alt="Ray-Ban Glasses Image" />
               <div class="text">
                 <h3>Ray-Ban Glasses</h3>
                 <p>Glasses</p>
@@ -360,7 +383,10 @@
             <!-- End Cell-12 -->
             <!-- Start Cell-13 -->
             <div class="cell cell-13">
-              <img src="./imgs/trending-13.jpg" alt="" />
+              <img
+                src="./imgs/trending-13.jpg"
+                alt="Mont Blank Hand Bag Image"
+              />
               <div class="text">
                 <h3>Mont Blank Hand Bag</h3>
                 <p>Wallets</p>
@@ -373,7 +399,7 @@
             <!-- End Cell-13 -->
             <!-- Start Cell-14 -->
             <div class="cell cell-14">
-              <img src="./imgs/trending-14.jpg" alt="" />
+              <img src="./imgs/trending-14.jpg" alt="Ray-Ban Glasses Image" />
               <div class="text">
                 <h3>Ray-Ban Glasses</h3>
                 <p>Glasses</p>
@@ -386,7 +412,7 @@
             <!-- End Cell-14 -->
             <!-- Start Cell-15 -->
             <div class="cell cell-15">
-              <img src="./imgs/trending-15.jpg" alt="" />
+              <img src="./imgs/trending-15.jpg" alt="Ray-Ban Glasses Image" />
               <div class="text">
                 <h3>Ray-Ban Glasses</h3>
                 <p>Glasses</p>
@@ -399,7 +425,10 @@
             <!-- End Cell-15 -->
             <!-- Start Cell-16 -->
             <div class="cell cell-16">
-              <img src="./imgs/trending-16.jpg" alt="" />
+              <img
+                src="./imgs/trending-16.jpg"
+                alt="Front-pocket Wallet Image"
+              />
               <div class="text">
                 <h3>Front-pocket Wallet</h3>
                 <p>Wallets</p>
@@ -422,7 +451,7 @@
         </div>
         <div class="container">
           <div class="dotd-container">
-            <img src="./imgs/dotd.jpg" alt="" />
+            <img src="./imgs/dotd.jpg" alt="Ramadan's Collection Image" />
             <div class="deal-description">
               <div class="stars">
                 <span class="star-filled"></span>
@@ -470,7 +499,7 @@
           <div class="cards-holder">
             <!-- Start Card-1 -->
             <div class="card" id="product-01">
-              <img src="imgs/product-01-01.jpg" alt="" />
+              <img src="imgs/product-01-01.jpg" alt="Card Lighter Image" />
               <div class="text">
                 <div class="product">
                   <h3 class="brand-title">Card Lighter</h3>
@@ -482,7 +511,7 @@
                     <div class="star-empty"></div>
                   </div>
                   <p class="brand-describtion">
-                    for <span class="price-01">30,000 s.p.</span>
+                    for <span class="price-01">30,000</span>
                   </p>
                 </div>
                 <div class="btns">
@@ -496,7 +525,7 @@
             <!-- End Card-1 -->
             <!-- Start Card-2 -->
             <div class="card" id="product-02">
-              <img src="imgs/product-02-01.jpg" alt="" />
+              <img src="imgs/product-02-01.jpg" alt="Hand Wallet Image" />
               <div class="text">
                 <div class="product">
                   <h3 class="brand-title">Hand Wallet</h3>
@@ -508,7 +537,7 @@
                     <div class="star-empty"></div>
                   </div>
                   <p class="brand-describtion">
-                    for <span class="price-02">50,000 s.p.</span>
+                    for <span class="price-02">50,000</span>
                   </p>
                 </div>
                 <div class="btns">
@@ -522,7 +551,7 @@
             <!-- End Card-2 -->
             <!-- Start Card-3 -->
             <div class="card" id="product-03">
-              <img src="imgs/product-03-01.jpg" alt="" />
+              <img src="imgs/product-03-01.jpg" alt="Bag Image" />
               <div class="text">
                 <div class="product">
                   <h3 class="brand-title">Bag</h3>
@@ -534,7 +563,7 @@
                     <div class="star-empty"></div>
                   </div>
                   <p class="brand-describtion">
-                    for <span class="price-03">90,000 s.p.</span>
+                    for <span class="price-03">90,000</span>
                   </p>
                 </div>
                 <div class="btns">
@@ -548,7 +577,7 @@
             <!-- End Card-3 -->
             <!-- Start Card-4 -->
             <div class="card" id="product-04">
-              <img src="imgs/product-04-01.jpg" alt="" />
+              <img src="imgs/product-04-01.jpg" alt="G-Rex Watch Image" />
               <div class="text">
                 <div class="product">
                   <h3 class="brand-title">G-Rex Watch</h3>
@@ -561,21 +590,21 @@
                   </div>
                   <p class="brand-describtion">
                     for
-                    <span class="price-04" id="add-to-cart-04"
-                      >50,000 s.p.</span
-                    >
+                    <span class="price-04">50,000</span>
                   </p>
                 </div>
                 <div class="btns">
                   <a href="#" class="details">See Details</a>
-                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="add-to-cart" id="add-to-cart-04">
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
             <!-- End Card-4 -->
             <!-- Start Card-5 -->
             <div class="card" id="product-05">
-              <img src="imgs/product-05-01.jpg" alt="" />
+              <img src="imgs/product-05-01.jpg" alt="Scarf Image" />
               <div class="text">
                 <div class="product">
                   <h3 class="brand-title">Scarf</h3>
@@ -588,21 +617,21 @@
                   </div>
                   <p class="brand-describtion">
                     for
-                    <span class="price-05" id="add-to-cart-05"
-                      >25,000 s.p.</span
-                    >
+                    <span class="price-05">25,000</span>
                   </p>
                 </div>
                 <div class="btns">
                   <a href="#" class="details">See Details</a>
-                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="add-to-cart" id="add-to-cart-05">
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
             <!-- End Card-5 -->
             <!-- Start Card-6 -->
             <div class="card" id="product-06">
-              <img src="imgs/product-06-01.jpg" alt="" />
+              <img src="imgs/product-06-01.jpg" alt="Classic Watch Image" />
               <div class="text">
                 <div class="product">
                   <h3 class="brand-title">Classic Watch</h3>
@@ -614,7 +643,7 @@
                     <div class="star-filled"></div>
                   </div>
                   <p class="brand-describtion">
-                    for <span class="price-06">50,000 s.p.</span>
+                    for <span class="price-06">50,000</span>
                   </p>
                 </div>
                 <div class="btns">

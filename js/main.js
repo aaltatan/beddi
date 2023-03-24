@@ -62,4 +62,106 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-// ---- Hiding Header on Scroll Down and Functioning Scroll To top -------
+/* ------ HomePage Shopping Cart ------- */
+// Showing the Menu Button & Close
+let cartIcon = document.getElementById("cart-btn");
+let cartMenu = document.getElementById("curtain-cart-menu");
+let menuCloseBtn = document.getElementById("menu-close-button");
+cartIcon.addEventListener("click", () => (cartMenu.style.bottom = "0"));
+menuCloseBtn.addEventListener("click", () => (cartMenu.style.bottom = "-120%"));
+// Simulating add to cart with 'Special Section ONLY'
+// 1- Getting Product information onClick & Animation & increasing icon
+let productsSection = document.getElementById("products");
+let cartArr = [];
+let testArr = [];
+productsSection.addEventListener("click", (e) => {
+  if (e.target.id.startsWith("add-to-cart-0")) {
+    let prodId = e.target.id;
+    let prodNumber = prodId[prodId.length - 1];
+    let prodTitle = document.querySelector(
+      `#product-0${prodNumber} .brand-title`
+    ).textContent;
+    let prodPrice = document
+      .querySelector(`#product-0${prodNumber} .price-0${prodNumber}`)
+      .textContent.replace(",", "");
+    prodPrice = Number(prodPrice);
+    // --------
+    let cartHandler = document.getElementById("cart-handler");
+    let cartBody = document.getElementById("cart-body");
+    let cartLeftWheel = document.getElementById("cart-wheel-left");
+    let cartRightWheel = document.getElementById("cart-wheel-right");
+    let cartLineOne = document.getElementById("cart-line-one");
+    let cartLineTwo = document.getElementById("cart-line-two");
+    let cartLineThree = document.getElementById("cart-line-three");
+    // --------
+    cartHandler.classList.add("shake-anmi");
+    cartBody.classList.add("shake-anmi");
+    cartLeftWheel.classList.add("wheel-anmi");
+    cartRightWheel.classList.add("wheel-anmi");
+    cartLineOne.classList.add("lines-anmi");
+    cartLineTwo.classList.add("lines-anmi");
+    cartLineThree.classList.add("lines-anmi");
+    setTimeout(() => {
+      cartHandler.classList.remove("shake-anmi");
+      cartBody.classList.remove("shake-anmi");
+      cartLeftWheel.classList.remove("wheel-anmi");
+      cartRightWheel.classList.remove("wheel-anmi");
+      cartLineOne.classList.remove("lines-anmi");
+      cartLineTwo.classList.remove("lines-anmi");
+      cartLineThree.classList.remove("lines-anmi");
+    }, 1300);
+    // --------
+    let cartMenuContainer = document.getElementById("cart-menu-container");
+    if (!testArr.includes(prodId)) {
+      testArr.push(prodId);
+      cartArr.push(prodPrice);
+      let cartTotal = cartArr.reduce((acc, a) => (a = a + acc), 0);
+      document
+        .getElementById("heading-total")
+        .setAttribute("data-value", cartTotal.toLocaleString());
+      cartIcon.setAttribute("data-value", testArr.length);
+      // -------
+      let cartMenuProduct = document.createElement("div");
+      cartMenuProduct.className = "cart-menu-product";
+      // -------
+      let xBtn = document.createElement("a");
+      xBtn.href = "javascript:void(0)";
+      xBtn.classList.add("product-close-button");
+      xBtn.textContent = "×";
+      cartMenuProduct.appendChild(xBtn);
+      // -------
+      let xImg = document.createElement("img");
+      xImg.src = `./imgs/product-0${prodNumber}-01.jpg`;
+      xImg.alt = `product-0${prodId}-01`;
+      cartMenuProduct.appendChild(xImg);
+      // -------
+      let xText = document.createElement("div");
+      xText.classList.add("text");
+      // ---------
+      let xTextbrandTitle = document.createElement("h3");
+      xTextbrandTitle.className = "brand-title";
+      xTextbrandTitle.textContent = `${prodTitle}`;
+      xText.appendChild(xTextbrandTitle);
+      // ---------
+      let xTextbrandDesc = document.createElement("p");
+      xTextbrandDesc.className = "product-description";
+      xTextbrandDesc.textContent =
+        "Lorem ipsum dolor sit, amet consectetur adipisicing.";
+      xText.appendChild(xTextbrandDesc);
+      // ---------
+      let xTextQty = document.createElement("div");
+      xTextQty.className = "quanity";
+      // -------------
+      let xTextQtyPriceSpan = document.createElement("span");
+      xTextQtyPriceSpan.className = "price-span";
+      xTextQtyPriceSpan.textContent = `${Number(prodPrice).toLocaleString()}`;
+      xTextQty.appendChild(xTextQtyPriceSpan);
+      // ---------
+      xText.appendChild(xTextQty);
+      // -------
+      cartMenuProduct.appendChild(xText);
+      // ---
+      cartMenuContainer.appendChild(cartMenuProduct);
+    }
+  }
+});
