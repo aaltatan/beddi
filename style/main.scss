@@ -70,6 +70,20 @@ html {
       color: var(--orange);
     }
   }
+  .checkout {
+    @include centering-h-middle();
+    bottom: 2rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 100vmax;
+    color: var(--text-fixed-color);
+    background-color: var(--orange);
+    text-decoration: none;
+    transition-duration: 300ms;
+    &:hover {
+      background-color: var(--blue);
+    }
+  }
   .cart-menu-container {
     position: relative;
     padding: 1rem;

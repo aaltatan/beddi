@@ -232,6 +232,24 @@ html {
 .curtain-cart-menu .menu-close-button:hover {
   color: var(--orange);
 }
+.curtain-cart-menu .checkout {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 100vmax;
+  color: var(--text-fixed-color);
+  background-color: var(--orange);
+  text-decoration: none;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+.curtain-cart-menu .checkout:hover {
+  background-color: var(--blue);
+}
 .curtain-cart-menu .cart-menu-container {
   position: relative;
   padding: 1rem;

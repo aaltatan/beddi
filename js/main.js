@@ -62,7 +62,7 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-/* ------ HomePage Shopping Cart ------- */
+// ----------------------- HomePage Shopping Cart ------------------------
 // Showing the Menu Button & Close
 let cartIcon = document.getElementById("cart-btn");
 let cartMenu = document.getElementById("curtain-cart-menu");
@@ -70,7 +70,6 @@ let menuCloseBtn = document.getElementById("menu-close-button");
 cartIcon.addEventListener("click", () => (cartMenu.style.bottom = "0"));
 menuCloseBtn.addEventListener("click", () => (cartMenu.style.bottom = "-120%"));
 // Simulating add to cart with 'Special Section ONLY'
-// 1- Getting Product information onClick & Animation & increasing icon
 let productsSection = document.getElementById("products");
 let cartArr = [];
 let testArr = [];
@@ -123,10 +122,12 @@ productsSection.addEventListener("click", (e) => {
       // -------
       let cartMenuProduct = document.createElement("div");
       cartMenuProduct.className = "cart-menu-product";
+      cartMenuProduct.id = `cart-menu-product-0${prodNumber}`;
       // -------
       let xBtn = document.createElement("a");
       xBtn.href = "javascript:void(0)";
       xBtn.classList.add("product-close-button");
+      xBtn.classList.add(`inside-x-button-0${prodNumber}`);
       xBtn.textContent = "×";
       cartMenuProduct.appendChild(xBtn);
       // -------
@@ -154,6 +155,7 @@ productsSection.addEventListener("click", (e) => {
       // -------------
       let xTextQtyPriceSpan = document.createElement("span");
       xTextQtyPriceSpan.className = "price-span";
+      xTextQtyPriceSpan.id = `price-span-0${prodNumber}`;
       xTextQtyPriceSpan.textContent = `${Number(prodPrice).toLocaleString()}`;
       xTextQty.appendChild(xTextQtyPriceSpan);
       // ---------
@@ -163,5 +165,25 @@ productsSection.addEventListener("click", (e) => {
       // ---
       cartMenuContainer.appendChild(cartMenuProduct);
     }
+  }
+});
+// --------------------
+cartMenu.addEventListener("click", (e) => {
+  let targetClassName = e.target.className.split(" ");
+  if (targetClassName[0] === "product-close-button") {
+    let targetID = targetClassName[targetClassName.length - 1];
+    targetID = targetID[targetID.length - 1];
+    let targetPrice = document.getElementById(
+      `price-span-0${targetID}`
+    ).innerHTML;
+    targetPrice = Number(targetPrice.replace(/,/g, ""));
+    cartArr.splice(cartArr.indexOf(targetPrice), 1);
+    document.getElementById(`cart-menu-product-0${targetID}`).remove();
+    testArr.splice(testArr.indexOf(`add-to-cart-0${targetID}`), 1);
+    cartIcon.setAttribute("data-value", testArr.length);
+    let cartTotal = cartArr.reduce((acc, a) => (a = a + acc), 0);
+    document
+      .getElementById("heading-total")
+      .setAttribute("data-value", cartTotal.toLocaleString());
   }
 });
