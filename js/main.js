@@ -36,7 +36,7 @@ setInterval(() => {
   let ind = +myUrl[myUrl.length - 5];
   if (ind === 4) ind = 0;
   myLanding.style.backgroundImage = `url(imgs/landing-bg-0${ind + 1}.jpg)`;
-}, 5000);
+}, 10000);
 // ---- Hiding Header on Scroll Down and Functioning Scroll To top -------
 let prevScrollpos = window.pageYOffset;
 let scrollBtn = document.getElementById("scroll-to-top");
