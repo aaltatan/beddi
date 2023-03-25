@@ -187,3 +187,23 @@ cartMenu.addEventListener("click", (e) => {
       .setAttribute("data-value", cartTotal.toLocaleString());
   }
 });
+// ----------------------- Modal Image For trending ------------------------
+let modalImage = document.querySelector(".modal-trending-image");
+let modalImageimg = document.querySelector(".modal-trending-image > img");
+let xBtnModal = document.querySelector(".modal-trending-image > a");
+let trendingImages = document.querySelectorAll(
+  ".trending-container .cell > img"
+);
+trendingImages.forEach((trendImg) => {
+  trendImg.addEventListener("click", () => {
+    modalImageimg.src = trendImg.src;
+    modalImage.style.minHeight = "100vh";
+    modalImage.style.minWidth = "100vw";
+    xBtnModal.innerHTML = "×";
+  });
+});
+xBtnModal.addEventListener("click", () => {
+  modalImage.style.minHeight = "0";
+  modalImage.style.minWidth = "0";
+  xBtnModal.innerHTML = "";
+});

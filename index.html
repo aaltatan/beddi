@@ -23,12 +23,12 @@
     />
     <!-- Font Awesome & Bootstap Icons -->
     <!-- Main CSS file -->
-    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="./style/main.css" />
     <!-- Main CSS file -->
     <!-- Bar Icon -->
     <link
       rel="icon"
-      href="imgs/icons8-shopping-cart-64.png"
+      href="./imgs/icons8-shopping-cart-64.png"
       type="image/icon type"
     />
     <!-- Bar Icon -->
@@ -49,6 +49,11 @@
     </div>
     <!-- End Cart Icon -->
     <!-- Start Commponents -->
+    <div class="modal-trending-image">
+      <a href="javascript:void(0)"></a>
+      <img src="./imgs/trending-10.jpg" alt="" />
+    </div>
+    <!-- ----------------- -->
     <button class="scroll-to-top" id="scroll-to-top" title="Scroll to top">
       <i class="fa fa-2x fa-arrow-circle-up"></i>
     </button>
@@ -60,7 +65,13 @@
         id="menu-close-button"
         >&times;</a
       >
-      <a href="#" target="_blank" class="checkout" id="checkout">Checkout</a>
+      <a
+        href="./pages/checkout.html"
+        target="_blank"
+        class="checkout"
+        id="checkout"
+        >Checkout</a
+      >
       <div class="cart-menu-container" id="cart-menu-container">
         <h3 id="heading-total" data-value="0">Shoping Cart</h3>
       </div>
@@ -74,9 +85,6 @@
         <h3>Beddi</h3>
       </div>
       <ul id="links">
-        <li>
-          <a href="#">Home</a>
-        </li>
         <li>
           <a href="#trending">Trendings</a>
         </li>

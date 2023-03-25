@@ -37,6 +37,37 @@ html {
   --unimportant: #c4c4c4;
 }
 /* -------- Start Commponents ----------- */
+/* -------- Modal Trending Images ------- */
+.modal-trending-image {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 400;
+  min-width: 0;
+  min-height: 0;
+  background-color: rgba(0, 0, 0, 9);
+  transition-duration: 300ms;
+  > a {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    color: var(--text-fixed-color);
+    transition-duration: 300ms;
+    font-size: 2rem;
+    text-decoration: none;
+    &:hover {
+      color: var(--orange);
+    }
+  }
+  > img {
+    @include centering-middle();
+    width: calc(80% - 2rem);
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+}
 /* -------- container ----------- */
 .container {
   padding: 0 1rem;
@@ -61,9 +92,13 @@ html {
   .menu-close-button {
     position: absolute;
     top: 2rem;
-    /* add it for chrome mobile */
     @media (max-width: 767px) {
+      /* add it for chrome mobile */
       top: 5rem;
+    }
+    @media (max-width: 320px) {
+      /* add it for iPhone SE mobile */
+      top: 2rem;
     }
     right: 2rem;
     z-index: 301;
@@ -78,9 +113,17 @@ html {
   }
   .checkout {
     @include centering-h-middle();
-    bottom: 5rem;
+    top: 2rem;
+    @media (max-width: 767px) {
+      /* add it for chrome mobile */
+      top: 5rem;
+    }
+    @media (max-width: 320px) {
+      /* add it for iPhone SE mobile */
+      top: 2rem;
+    }
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     border-radius: 100vmax;
     color: var(--text-fixed-color);
     background-color: var(--orange);
@@ -147,7 +190,7 @@ html {
       .text {
         width: 100%;
         color: var(--text-fixed-color);
-        font-size: clamp(0.75rem, 2vw, 1rem);
+        font-size: clamp(0.5rem, 2vw, 1rem);
         .brand-title {
           color: var(--orange);
         }
@@ -179,8 +222,8 @@ html {
   position: fixed;
   left: -4rem;
   bottom: 1rem;
-  // add it to support duckduckgo mobile Browser
   @media (max-width: 767px) {
+    /* add it to support duckduckgo mobile Browser */
     bottom: 4rem;
   }
   z-index: 50;
@@ -262,7 +305,7 @@ html {
   cursor: pointer;
   h1 {
     position: relative;
-    font-size: clamp(3rem, 4vw, 5rem);
+    font-size: clamp(2rem, 4vw, 5rem);
     font-weight: 700;
     color: var(--speacial-heading);
     background: linear-gradient(
@@ -290,8 +333,8 @@ $cart-width: 60px;
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  // add it to support cduckduckgo mobile Browser
   @media (max-width: 767px) {
+    /* add it to support cduckduckgo mobile Browser */
     bottom: 4rem;
   }
   width: $cart-width;
@@ -479,6 +522,7 @@ body {
   background: var(--bg-color);
   font-family: "Cairo", sans-serif;
 }
+/* ----------- Start HomePage ----------- */
 /* -------- Header ----------- */
 .main-navbar {
   position: fixed;
@@ -786,7 +830,6 @@ body {
       border-radius: inherit;
       @include flex("r", 0.5rem);
       padding: 0.5rem;
-      cursor: pointer;
       img {
         display: block;
         width: 100px;
@@ -794,6 +837,11 @@ body {
         object-fit: cover;
         border: 1px solid var(--border);
         border-radius: inherit;
+        cursor: pointer;
+        transition-duration: 300ms;
+        &:hover {
+          border: 1px solid var(--orange);
+        }
       }
       .text {
         width: 200px;
@@ -813,6 +861,7 @@ body {
           color: var(--text-color);
           font-size: 1rem;
           transition-duration: 300ms;
+          cursor: pointer;
           &:hover {
             color: var(--green);
           }
@@ -821,6 +870,7 @@ body {
           color: var(--cyan);
           font-weight: 700;
           transition-duration: 300ms;
+          cursor: pointer;
           &:hover {
             color: var(--green);
           }
@@ -1075,8 +1125,8 @@ body {
   padding: 1rem;
   padding-bottom: 1rem;
   border-top: 1px solid var(--border);
-  /* add it to support duckduckgo mobile Browser */
   @media (max-width: 767px) {
+    /* add it to support duckduckgo mobile Browser */
     padding-bottom: 9rem;
   }
   .container {
@@ -1213,8 +1263,8 @@ body {
     }
   }
 }
-/* End HomePage */
-/* Start Product Page */
+/*----------------- End HomePage ------------------*/
+/*------------ Start Product Page -----------------*/
 .product-main {
   margin-block: 5rem;
   .product-container {
@@ -1254,7 +1304,6 @@ body {
         }
       }
       .product-content {
-        flex-basis: 500px;
         @include flex("c", 0.5rem);
         align-items: flex-start;
         @media (max-width: 767px) {
@@ -1380,3 +1429,256 @@ body {
     }
   }
 }
+/*------------ End Product Page -----------------*/
+/*----------- Components Checkout Page ----------*/
+.form-checkout {
+  position: relative;
+  width: 100%;
+  display: flex;
+  .input-checkout {
+    flex: 1;
+    max-width: 100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    outline: none;
+    padding-top: 1rem;
+    padding-inline: 1rem;
+    transition-duration: 150ms;
+    caret-color: var(--orange);
+    color: var(--bg-fixed-color);
+    font-size: 1.25rem;
+    &::placeholder {
+      opacity: 0;
+    }
+    &:focus {
+      box-shadow: 0 0 2px 2px var(--orange) !important;
+    }
+    &:not(:placeholder-shown) {
+      box-shadow: 0 0 1px 1px var(--border);
+      background-color: #e6e6e6;
+    }
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      transform: translateY(-110%);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    &:focus + label {
+      color: var(--orange) !important ;
+    }
+    &:not(:placeholder-shown) + label {
+      color: var(--green);
+    }
+    & + label {
+      @include centering-v-middle();
+      left: 1rem;
+      font-size: 1rem;
+      font-weight: 300;
+      transition-duration: 150ms;
+    }
+  }
+}
+/*------------- Start Checkout Page -------------*/
+.checkout-main {
+  margin: 5rem 0 1rem 0;
+  .checkout-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1rem;
+    @media (max-width: 920px) {
+      grid-template-columns: 1fr;
+    }
+    .shipping-information {
+      @media (max-width: 920px) {
+        order: 2;
+      }
+      .express {
+        @media (max-width: 920px) {
+          width: 100%;
+          display: grid;
+          place-items: center;
+        }
+        > h2 {
+          color: var(--text-color);
+        }
+        .imgs-container {
+          @include flex("r", 0.5rem);
+          width: fit-content;
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.5rem;
+          background-color: white;
+          > img {
+            width: 50px;
+            height: 28px;
+            object-fit: contain;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            &:hover {
+              border: 1px solid var(--orange);
+            }
+          }
+        }
+      }
+      .form {
+        > h2 {
+          color: var(--text-color);
+          @media (max-width: 920px) {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        > form {
+          @include flex("c", 0.5rem);
+          align-items: flex-start;
+          .full-name-form {
+            width: 100%;
+            @include flex("r", 0.5rem);
+            @media (max-width: 767px) {
+              flex-wrap: wrap;
+            }
+          }
+          .email-form {
+          }
+          .check {
+            > input {
+              appearance: none;
+            }
+            > input:checked {
+              & + label {
+                color: var(--orange);
+              }
+              & + label::after {
+                width: 0.5rem;
+                aspect-ratio: 1/2.5;
+                border-color: var(--orange);
+                border-left-color: transparent;
+                border-top-color: transparent;
+                transform: translate(20%, -70%) rotate(45deg);
+              }
+            }
+            > label {
+              position: relative;
+              padding-left: 2rem;
+              color: var(--text-color);
+              transition-duration: 150ms;
+              cursor: pointer;
+              &:hover {
+                color: var(--text-color) !important;
+                &::after {
+                  border-color: var(--orange);
+                }
+              }
+              &::after {
+                content: "";
+                @include centering-v-middle();
+                left: 0;
+                width: 1rem;
+                aspect-ratio: 1/1;
+                border: 2px solid var(--border);
+                transition-duration: 150ms;
+              }
+            }
+          }
+          .city-select {
+            > label {
+              color: var(--text-color);
+              margin-right: 1rem;
+            }
+            > select {
+              height: 2rem;
+              border-radius: 0.5rem;
+              border: 1px solid var(--border);
+              outline: none;
+              transition-duration: 150ms;
+              color: var(--bg-fixed-color);
+              font-weight: 300;
+              &:hover {
+                border-color: var(--orange);
+              }
+            }
+          }
+          > button {
+            height: 3rem;
+            width: 200px;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            outline: none;
+            background-color: var(--orange);
+            color: var(--text-fixed-color);
+            font-weight: 700;
+            transition-duration: 300ms;
+            &:hover {
+              background-color: var(--blue);
+              color: var(--green);
+            }
+            cursor: pointer;
+            @media (max-width: 920px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .order-summary {
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      @media (max-width: 920px) {
+        order: 1;
+      }
+      > h2 {
+        color: var(--text-color);
+        margin-bottom: 1rem;
+      }
+      .cart-items {
+        @include flex("c", 1rem);
+        .cart-item {
+          @include flex("r", 1rem);
+          > img {
+            width: min(100%, 100px);
+            border-radius: 1rem;
+          }
+          .cart-item-details {
+            flex: 1;
+            color: var(--text-color);
+            line-height: 1.2;
+            > h3 {
+              position: relative;
+              width: 100%;
+              &:hover::after {
+                color: var(--orange);
+              }
+              &::after {
+                content: "×";
+                @include centering-v-middle();
+                right: 0.5rem;
+                color: var(--text-color);
+                cursor: pointer;
+                transition-duration: 300ms;
+              }
+            }
+            > P {
+              > span {
+                color: var(--orange);
+                font-weight: 700;
+              }
+            }
+          }
+        }
+        .total {
+          > span {
+            color: var(--text-color);
+            > span {
+              color: var(--orange);
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*-------------- End Checkout Page --------------*/

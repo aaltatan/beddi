@@ -32,40 +32,12 @@
       type="image/icon type"
     />
     <!-- Bar Icon -->
-    <title>Hand Wallet</title>
+    <title>Checkout</title>
   </head>
   <body>
-    <!-- Start Cart Icon -->
-    <div class="cart" id="cart-btn" data-value="0">
-      <div class="cart-handler" id="cart-handler"></div>
-      <div class="cart-body" id="cart-body"></div>
-      <div class="cart-wheels">
-        <div class="cart-wheel-left" id="cart-wheel-left"></div>
-        <div class="cart-wheel-right" id="cart-wheel-right"></div>
-      </div>
-      <div class="cart-line-one" id="cart-line-one"></div>
-      <div class="cart-line-two" id="cart-line-two"></div>
-      <div class="cart-line-three" id="cart-line-three"></div>
-    </div>
-    <!-- End Cart Icon -->
-    <!-- Start Commponents -->
     <button class="scroll-to-top" id="scroll-to-top" title="Scroll to top">
       <i class="fa fa-2x fa-arrow-circle-up"></i>
     </button>
-    <!-- ----------------- -->
-    <div class="curtain-cart-menu" id="curtain-cart-menu">
-      <a
-        href="javascript:void(0)"
-        class="menu-close-button"
-        id="menu-close-button"
-        >&times;</a
-      >
-      <a href="#" target="_blank" class="checkout" id="checkout">Checkout</a>
-      <div class="cart-menu-container" id="cart-menu-container">
-        <h3 id="heading-total" data-value="0">Shoping Cart</h3>
-      </div>
-    </div>
-    <!-- End Commponents -->
     <!-- Start Header -->
     <header class="main-navbar" id="main-navbar">
       <div class="brand-title">
@@ -74,9 +46,6 @@
         <h3>Beddi</h3>
       </div>
       <ul id="links">
-        <li>
-          <a href="../index.html">Home</a>
-        </li>
         <li>
           <a href="../index.html#trending">Trendings</a>
         </li>
@@ -106,133 +75,125 @@
     </header>
     <!-- End Header -->
     <!-- Start Main -->
-    <main class="product-main">
+    <main class="checkout-main">
       <div class="container">
-        <div class="product-container">
-          <!-- Start Product Body -->
-          <div class="product-body">
-            <div class="product-body-images">
-              <img
-                src="../imgs/product-02-01.jpg"
-                alt="primary-image"
-                class="primary-image"
-                id="primary-image"
-              />
-              <div class="secondry-images">
-                <img
-                  src="../imgs/product-02-01.jpg"
-                  class="secondry-image product-02-01"
-                  alt="secondry-image"
-                />
-                <img
-                  src="../imgs/product-02-02.jpg"
-                  class="secondry-image product-02-02"
-                  alt="secondry-image"
-                />
-                <img
-                  src="../imgs/product-02-03.jpg"
-                  class="secondry-image product-02-03"
-                  alt="secondry-image"
-                />
-                <img
-                  src="../imgs/product-02-04.jpg"
-                  class="secondry-image product-02-04"
-                  alt="secondry-image"
-                />
+        <div class="checkout-content">
+          <div class="shipping-information">
+            <div class="express">
+              <h2>Express Checkout</h2>
+              <div class="imgs-container">
+                <img src="../imgs/checkout-01.png" alt="" title="Apple Pay" />
+                <img src="../imgs/checkout-02.png" alt="" title="Google Pay" />
+                <img src="../imgs/checkout-03.png" alt="" title="Paypal" />
+                <img src="../imgs/checkout-04.png" alt="" title="Shop Pay" />
               </div>
             </div>
-            <div class="product-content">
-              <div class="product-heading">
-                <h1>Hand Wallet</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Provident, iusto vitae delectus quas dolorum sunt
-                  exercitationem! Perspiciatis, neque vel, illum minus a libero
-                  sed pariatur porro unde reprehenderit fugiat accusantium magni
-                  laborum repudiandae nulla amet maxime recusandae repellat
-                  animi quod.
-                </p>
+            <div class="form">
+              <h2>Shipping Information</h2>
+              <form>
+                <div class="full-name-form">
+                  <div class="f-name-form form-checkout">
+                    <input
+                      class="input-checkout"
+                      type="text"
+                      id="f-name"
+                      name="f-name"
+                      required
+                      placeholder="."
+                    />
+                    <label for="f-name">First Name</label>
+                  </div>
+                  <div class="l-name-form form-checkout">
+                    <input
+                      class="input-checkout"
+                      type="text"
+                      id="l-name"
+                      name="l-name"
+                      required
+                      placeholder="."
+                    />
+                    <label for="l-name">Last Name</label>
+                  </div>
+                </div>
+                <div class="email-form form-checkout">
+                  <input
+                    class="input-checkout"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="."
+                  />
+                  <label for="email">Email Address</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="check-1" name="check-1" required />
+                  <label for="check-1">Email me with news and offers</label>
+                </div>
+                <div class="address-form form-checkout">
+                  <input
+                    class="input-checkout"
+                    type="text"
+                    id="address"
+                    name="address"
+                    required
+                    placeholder="."
+                  />
+                  <label for="address">Shipping Address</label>
+                </div>
+                <div class="city-select">
+                  <label for="city-form">City:</label>
+                  <select class="city-form" id="city-form">
+                    <option value="1">Homs</option>
+                    <option value="2">Hama</option>
+                    <option value="3">Damascus</option>
+                    <option value="4">Aleppo</option>
+                    <option value="5">Lattakia</option>
+                  </select>
+                </div>
+                <div class="phone-form form-checkout">
+                  <input
+                    class="input-checkout"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="."
+                  />
+                  <label for="phone">Phone</label>
+                </div>
+                <button type="submit">Place Order</button>
+              </form>
+            </div>
+          </div>
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="cart-items">
+              <div class="cart-item">
+                <img src="../imgs/product-01-01.jpg" alt="Product Image" />
+                <div class="cart-item-details">
+                  <h3>Card Lighter</h3>
+                  <p>Price: <span>30,000</span></p>
+                  <p>Quantity: <span>1</span></p>
+                </div>
               </div>
-              <div class="pricing">
-                <span class="price" id="prod-price">50,000</span>
-                <span class="old-price">100,000</span>
-                <span class="discount">50% off</span>
+              <div class="cart-item">
+                <img src="../imgs/product-02-01.jpg" alt="Product Image" />
+                <div class="cart-item-details">
+                  <h3>Hand Wallet</h3>
+                  <p>Price: <span>50,000</span></p>
+                  <p>Quantity: <span>2</span></p>
+                </div>
               </div>
-              <div class="quanity">
-                <span class="minus" id="qty-minus"
-                  ><i class="fa fa-minus"></i>
-                </span>
-                <div class="quanity-field" id="quanity-field">1</div>
-                <span class="plus" id="qty-plus"
-                  ><i class="fa fa-plus"></i>
-                </span>
-              </div>
-              <span class="total" id="product-page-total"></span>
-              <div class="btns">
-                <button class="buy-now">Buy Now</button>
-                <button class="add-to-cart">Add to Cart</button>
+              <div class="total">
+                <span>Total = <span>130,000</span></span>
               </div>
             </div>
           </div>
-          <!-- End Product Body -->
-          <!-- Start Product Footer -->
-          <div class="product-footer">
-            <p class="footer-heading">People also bought</p>
-            <div class="product-footer-content">
-              <div class="cards">
-                <div class="card card-01">
-                  <a href="../pages/product-01.html"></a>
-                  <img src="../imgs/product-01-01.jpg" alt="" />
-                  <div class="card-description">
-                    <h3>Card Lighter</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span class="price">30,000</span>
-                  </div>
-                </div>
-                <div class="card card-02">
-                  <a href="../pages/product-03.html"></a>
-                  <img src="../imgs/product-03-01.jpg" alt="" />
-                  <div class="card-description">
-                    <h3>Bag</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span class="price">90,000</span>
-                  </div>
-                </div>
-                <div class="card card-03">
-                  <a href="../pages/product-04.html"></a>
-                  <img src="../imgs/product-04-01.jpg" alt="" />
-                  <div class="card-description">
-                    <h3>G-Rex Watch</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span class="price">50,000</span>
-                  </div>
-                </div>
-                <div class="card card-04">
-                  <a href="../pages/product-05.html"></a>
-                  <img src="../imgs/product-05-01.jpg" alt="" />
-                  <div class="card-description">
-                    <h3>Scarf</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span class="price">25,000</span>
-                  </div>
-                </div>
-                <div class="card card-05">
-                  <a href="../pages/product-06.html"></a>
-                  <img src="../imgs/product-06-01.jpg" alt="" />
-                  <div class="card-description">
-                    <h3>Classic Watch</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span class="price">50,000</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Product Footer -->
         </div>
       </div>
+      <!-- End Main -->
     </main>
-    <!-- End Main -->
     <!-- Start Footer -->
     <footer class="main-footer" id="main-footer">
       <div class="container">
@@ -346,7 +307,7 @@
     </footer>
     <!-- End Footer -->
     <!-- Script File -->
-    <script src="../js/prod-page.js"></script>
+    <script src="../js/checkout.js"></script>
     <!-- Script File -->
   </body>
 </html>
